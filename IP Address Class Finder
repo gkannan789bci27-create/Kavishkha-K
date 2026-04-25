@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    char ip[20];
+    int first_octet;
+    printf("Enter IP (e.g., 192.168.1.1): ");
+    scanf("%s", ip);
+    first_octet = atoi(ip); // Extracts first number before the dot
+    if (first_octet >= 0 && first_octet <= 127) printf("Class A\n");
+    else if (first_octet <= 191) printf("Class B\n");
+    else if (first_octet <= 223) printf("Class C\n");
+    return 0;
+}
