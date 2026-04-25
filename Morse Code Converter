@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char text[100];
+    printf("Enter text: ");
+    scanf("%s", text);
+    for(int i = 0; text[i] != '\0'; i++) {
+        switch(toupper(text[i])) {
+            case 'A': printf(".- "); break;
+            case 'B': printf("-... "); break;
+            case 'C': printf("-.-. "); break;
+            // Add more cases for other letters...
+        }
+    }
+    return 0;
+}
