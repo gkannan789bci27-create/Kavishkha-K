@@ -1,0 +1,10 @@
+
+#include 
+int main() {
+    int arr[] = {10,20,30};
+    int *ptr = arr;
+    printf("Value pointed by ptr: %d\n", *ptr);
+    ptr++;   // move pointer to next element
+    printf("Value after ptr++: %d\n", *ptr);
+    return 0;
+}
