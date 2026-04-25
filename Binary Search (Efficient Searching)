@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int a[10] = {10, 20, 30, 40, 50}, n=5, key=40, low=0, high=n-1, mid, found=0;
+    while (low <= high) {
+        mid = (low + high) / 2;
+        if (a[mid] == key) { found = 1; break; }
+        else if (key < a[mid]) high = mid - 1;
+        else low = mid + 1;
+    }
+    if (found) printf("Element found at index %d\n", mid);
+    else printf("Not found\n");
+    return 0;
+}
