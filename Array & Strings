@@ -1,0 +1,11 @@
+int main() {
+    int arr[] = {12, 45, 2, 67, 34, 8, 90, 54, 21, 10};
+    int max = arr[0];
+    for (int i = 1; i < 10; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    printf("Largest element: %d\n", max);
+    return 0;
+}
