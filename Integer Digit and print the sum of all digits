@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    int number, result = 0, remainder, multiplier = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    while (number > 0)
+    {
+        remainder = number % 10;
+        // Increment the digit and place it in its correct position
+        result = result + ((remainder + 1) * multiplier);
+        
+        number /= 10;
+        multiplier *= 10; // Move to the next place value (1, 10, 100...)
+    }
+
+    printf("Increasing 1 to all digits: %d", result);
+    return 0;
+}
